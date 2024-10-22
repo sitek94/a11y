@@ -9,10 +9,10 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        '@assets': path.resolve('./src/assets'),
-        '@components': path.resolve('./src/components'),
-        '@layouts': path.resolve('./src/layouts'),
-        '@examples': path.resolve('./src/examples'),
+        '@assets': path.resolve('src/assets'),
+        '@components': path.resolve('src/components'),
+        '@layouts': path.resolve('src/layouts'),
+        '@examples': path.resolve('src/examples'),
       },
     },
   },
