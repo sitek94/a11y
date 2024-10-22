@@ -30,13 +30,13 @@ export default function InteractiveList() {
   return (
     <ul
       aria-label="Interactive list"
-      className="py-2 px-4 flex flex-col gap-1 bg-base-300 w-80 rounded-box"
+      className="flex w-80 flex-col gap-1 rounded-box bg-base-300 px-4 py-2"
     >
       {items.map(({id, label}) => (
-        <li key={id} className="flex items-center relative m-0">
+        <li key={id} className="relative m-0 flex items-center">
           <button
             tabIndex={0}
-            className="p-2 flex grow gap-4 items-center relative hover:bg-base-100 focus:bg-base-100 outline-none rounded-sm"
+            className="relative flex grow items-center gap-4 rounded-sm p-2 outline-none hover:bg-base-100 focus:bg-base-100"
             onClick={() => toggleItem(id)}
           >
             <input
