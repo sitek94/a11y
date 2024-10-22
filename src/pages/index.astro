@@ -1,0 +1,24 @@
+---
+import Layout from '@layouts/layout.astro'
+
+const files = await Astro.glob('./**/*.{astro,md,mdx}')
+
+const links = files.map(({url}) => {
+  const fileName = url.split('/').pop()
+  const title = fileName.split('-').join(' ')
+
+  return {url, title}
+})
+---
+
+<Layout title="a11y: examples">
+  <ul class="prose">
+    {
+      links.map(({url, title}) => (
+        <li>
+          <a href={url}>{title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</Layout>

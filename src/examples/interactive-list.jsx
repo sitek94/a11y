@@ -7,7 +7,7 @@ const defaultItems = [
   {id: 'item4', label: 'Item 4'},
 ]
 
-export function InteractiveList() {
+export default function InteractiveList() {
   const [items, setItems] = useState(defaultItems)
   const [selectedItems, setSelectedItems] = useState([])
 
